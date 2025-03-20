@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>IT-Treasure Hunt</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="theme-color" content="#2980b9">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IT-Treasure Hunt</h1>
+        </header>
+        <main>
+            <div class="card">
+                <div id="playerInfo">
+                    <p>اللاعب: <span id="playerNameDisplay">مجهول</span></p>
+                    <button id="logoutButton" class="btn-small danger-btn">
+                        <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+                    </button>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar"></div>
+                    </div>
+                    <div class="progress-text">
+                        تحدي <span id="currentChallenge">0</span> من <span id="totalChallenges">0</span>
+                    </div>
+                </div>
+                
+                <div class="challenge-container">
+                    <h2 class="challenge-title" id="challengeTitle">عنوان التحدي</h2>
+                    <div class="riddle-text" id="challengeText">
+                        جاري تحميل التحدي...
+                    </div>
+                    
+                    <form id="answerForm">
+                        <div class="form-group">
+                            <label for="playerAnswer">إجابتك:</label>
+                            <input type="text" id="playerAnswer" name="playerAnswer" required>
+                        </div>
+                        
+                        <div id="answerFeedback" class="answer-feedback"></div>
+                        
+                        <div class="hint-container">
+                            <button type="button" id="hintButton" class="btn secondary-btn">
+                                <i class="fas fa-lightbulb"></i> عرض التلميح
+                            </button>
+                            <div id="hintText" class="hint-text"></div>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button type="submit" class="btn primary-btn">
+                                <i class="fas fa-check"></i> إرسال الإجابة
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="teamSyncStatus" class="team-status" style="display: none;">
+                    <!-- سيتم عرض حالة التزامن هنا -->
+                </div>
+                
+                <div class="nav-buttons">
+                    <a href="progress.html" class="btn secondary-btn">
+                        <i class="fas fa-chart-bar"></i> عرض التقدم
+                    </a>
+                    <a href="../index.html" class="btn secondary-btn">
+                        <i class="fas fa-home"></i> الرئيسية
+                    </a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 IT-Treasure Hunt</p>
+        </footer>
+    </div>
+    <script src="../js/app.js"></script>
+    <script src="../js/predefined-riddles.js"></script>
+    <script src="../js/challenge.js"></script>
+</body>
+</html>

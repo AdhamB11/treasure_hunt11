@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-Treasure Hunt - إعداد اللعبة</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IT-Treasure Hunt</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>إعداد اللعبة</h2>
+                
+                <div id="setupMessage" class="message" style="display: none;"></div>
+                
+                <form id="setupForm">
+                    <div class="form-group">
+                        <label for="gameTitle">عنوان اللعبة:</label>
+                        <input type="text" id="gameTitle" name="gameTitle" placeholder="أدخل عنوان اللعبة" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="numberOfChallenges">عدد التحديات:</label>
+                        <input type="number" id="numberOfChallenges" name="numberOfChallenges" min="1" max="10" required>
+                    </div>
+                    
+                    <div class="buttons">
+                        <button type="submit" class="btn primary-btn">
+                            <i class="fas fa-save"></i> حفظ الإعدادات
+                        </button>
+                        <a href="../index.html" class="btn secondary-btn">
+                            <i class="fas fa-arrow-left"></i> رجوع
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; ADHAM_B11</p>
+        </footer>
+    </div>
+    <script src="../js/app.js"></script>
+    <script src="../js/setup.js"></script>
+</body>
+</html>

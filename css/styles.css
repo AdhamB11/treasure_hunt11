@@ -1,0 +1,476 @@
+/* Global Styles */
+:root {
+    --primary-color: #2980b9;
+    --secondary-color: #3498db;
+    --danger-color: #e74c3c;
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --card-bg: #fff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --mobile-padding: 1rem;
+    --mobile-font-size: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.card p {
+    margin-bottom: 1.5rem;
+}
+
+/* Button Styles */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 500px) {
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #2f80b9;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.danger-btn {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.danger-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Player Info Styles */
+#playerInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Challenge Page Styles */
+.challenge-container {
+    text-align: left;
+}
+
+.challenge-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.riddle-text {
+    background-color: rgba(255, 127, 80, 0.1);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.answer-feedback {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+.correct {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #27ae60;
+}
+
+.incorrect {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #c0392b;
+}
+
+/* Hint Styles */
+.hint-container {
+    margin: 1.5rem 0;
+}
+
+.hint-text {
+    display: none;
+    background-color: rgba(52, 152, 219, 0.1);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 0.5rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* Progress Bar */
+.progress-container {
+    margin: 1.5rem 0;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #777;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Logout confirmation modal */
+.logout-modal {
+    text-align: center;
+}
+
+.logout-modal h3 {
+    margin-bottom: 1rem;
+    color: var(--danger-color);
+}
+
+.logout-modal p {
+    margin-bottom: 2rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Message Styles */
+.message {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.message.info {
+    background-color: rgba(52, 152, 219, 0.2);
+    color: #2980b9;
+    border-left: 4px solid #3498db;
+}
+
+.message.success {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #27ae60;
+    border-left: 4px solid #2ecc71;
+}
+
+.message.error {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #c0392b;
+    border-left: 4px solid #e74c3c;
+}
+
+/* Setup Page Styles */
+.challenge-list {
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.challenge-item {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--secondary-color);
+}
+
+.challenge-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.action-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    background-color: #ccc;
+}
+
+.action-btn.edit {
+    background-color: #f39c12;
+    color: white;
+}
+
+.action-btn.delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Navigation */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+/* QR Code */
+.qr-container {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.qr-image {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    header {
+        padding: 1rem 0;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    header {
+        padding: 1.5rem 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
